@@ -1,9 +1,16 @@
 const bill = document.querySelector("#bill");
-const serviceLevel = document.querySelector("#serviceLevel");
+let tip = document.querySelector("#serviceLevel");
 const peopleCount = document.querySelector("#peopleCount");
-const total = document.querySelector("#total");
+const submitButton = document.querySelector(".submitButton");
+const yourtotal = document.querySelector("#yourTotal");
+
+submitButton.addEventListener("click", calculate);
 
 function calculate(e) {
   e.preventDefault();
-  total.textContent = "hey";
+  let totalBill = +bill.value + bill.value * (tip.value / 100);
+  if (+peopleCount.value > 1) {
+    totalBill = totalBill / peopleCount.value;
+  }
+  yourTotal.textContent = totalBill;
 }
