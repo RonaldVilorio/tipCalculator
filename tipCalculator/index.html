@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-      
+    <form>
+      <div class="title">TIP CALCULATOR</div>
+
+      <label for="fname">How much was your bill? </label><br />
+      $<input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Bill Amount"
+      /><br />
+
+      <label for="fname">How was your service</label><br />
+      <input placeholder="--Choose an Option--" list="browsers" />
+      <datalist id="browsers">
+        <option value="30%-Outstanding"> </option>
+        <option value="20%-Good"> </option>
+        <option value="15%-It was OK"> </option>
+        <option value="10%-Bad"> </option>
+        <option value="5%-Terrible"> </option>
+      </datalist>
+      <br />
+
+      <label for="fname">How many people are sharing the bill? </label><br />
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Number of People"
+      /><br />
+      <button class="submitButton" type="submit">CALCULATE!</button>
+    </form>
+
     <script src="script.js"></script>
   </body>
 </html>
